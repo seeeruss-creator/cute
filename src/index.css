@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --midnight-deep: #0a0a1a;
+  --midnight-blue: #0d1030;
+  --deep-navy: #1a1a3e;
+  --soft-purple: #2d1b4e;
+  --dawn-pink: #4a2040;
+  --horizon-glow: #6b3a5c;
+  --lavender: #b8a9c9;
+  --soft-pink: #e8b4c8;
+  --silver-white: #f0e6ff;
+  --star-gold: #ffd700;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glow-pink: rgba(232, 180, 200, 0.4);
+  --glow-lavender: rgba(184, 169, 201, 0.4);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(
+    180deg,
+    var(--midnight-deep) 0%,
+    var(--midnight-blue) 20%,
+    var(--deep-navy) 40%,
+    var(--soft-purple) 60%,
+    var(--dawn-pink) 80%,
+    var(--horizon-glow) 100%
+  );
+  min-height: 100vh;
+  color: var(--silver-white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--midnight-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--lavender), var(--soft-pink));
+  border-radius: 3px;
+}
+
+/* Selection */
+::selection {
+  background: var(--glow-pink);
+  color: var(--silver-white);
+}
+
+/* Touch highlight removal for mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Prevent pull-to-refresh on mobile */
+body {
+  overscroll-behavior-y: contain;
+}
